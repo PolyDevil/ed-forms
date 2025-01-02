@@ -1,0 +1,21 @@
+:root {
+  --fontFamilyBase: system-ui;
+
+  --fontWeightRegular: 400;
+  --fontWeightSemibold: 600;
+  --fontWeightBold: 700;
+
+  /*
+		https://www.fluid-type-scale.com/calculate?minFontSize=18&minWidth=320&minRatio=1.25&maxFontSize=24&maxWidth=1920&maxRatio=1.414&steps=100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C1000&baseStep=500&prefix=fontSize&useContainerWidth=undefined&includeFallbacks=undefined&useRems=true&remValue=16&decimals=2&previewFont=Roboto+Flex&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=320
+	*/
+  --fontSize100: clamp(0.46rem, -0.09vi + 0.48rem, 0.38rem);
+  --fontSize200: clamp(0.58rem, -0.05vi + 0.59rem, 0.53rem);
+  --fontSize300: clamp(0.72rem, 0.03vi + 0.71rem, 0.75rem);
+  --fontSize400: clamp(0.9rem, 0.16vi + 0.87rem, 1.06rem);
+  --fontSize500: clamp(1.13rem, 0.38vi + 1.05rem, 1.5rem);
+  --fontSize600: clamp(1.41rem, 0.71vi + 1.26rem, 2.12rem);
+  --fontSize700: clamp(1.76rem, 1.24vi + 1.51rem, 3rem);
+  --fontSize800: clamp(2.2rem, 2.04vi + 1.79rem, 4.24rem);
+  --fontSize900: clamp(2.75rem, 3.25vi + 2.1rem, 6rem);
+  --fontSize1000: clamp(3.43rem, 5.05vi + 2.42rem, 8.48rem);
+}

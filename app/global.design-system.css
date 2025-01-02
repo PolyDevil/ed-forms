@@ -1,0 +1,60 @@
+:root {
+  /* shape */
+  --cornerRadiusNone: 0;
+  --cornerRadiusXS: 2px;
+  --cornerRadiusS: 4px;
+  --cornerRadiusM: 6px;
+  --cornerRadiusL: 8px;
+  --cornerRadiusXL: 12px;
+  --cornerRadiusPill: 999px;
+  --cornerRadiusCircle: 50%;
+
+  /* animation */
+  --durationUltraFast: 50ms;
+  --durationFaster: 100ms;
+  --durationFast: 150ms;
+  --durationNormal: 200ms;
+  --durationGentle: 250ms;
+  --durationSlow: 300ms;
+  --durationSlower: 400ms;
+  --durationUltraSlow: 500ms;
+
+  --curveAccelerateMax: cubic-bezier(0.9, 0.1, 1, 0.2);
+  --curveAccelerateMid: cubic-bezier(1, 0, 1, 1);
+  --curveAccelerateMin: cubic-bezier(0.8, 0, 0.78, 1);
+  --curveDecelerateMax: cubic-bezier(0.1, 0.9, 0.2, 1);
+  --curveDecelerateMid: cubic-bezier(0, 0, 0, 1);
+  --curveDecelerateMin: cubic-bezier(0.33, 0, 0.1, 1);
+  --curveEasyEaseMax: cubic-bezier(0.8, 0, 0.2, 1);
+  --curveEasyEase: cubic-bezier(0.33, 0, 0.67, 1);
+  --curveLinear: cubic-bezier(0, 0, 1, 1);
+
+  /* spacing */
+  --sn: 0em;
+  --s3xs: 0.125em;
+  --s2xs: 0.25em;
+  --sxs: 0.5em;
+  --ss: 0.75em;
+  --sm: 1em;
+  --sh: 1.125em;
+  --sl: 1.25em;
+  --sxl: 1.5em;
+  --s2xl: 1.75em;
+  --s3xl: 2em;
+  --s4xl: 2.5em;
+  --s5xl: 3em;
+
+  --rn: 0rem;
+  --r3xs: 0.125rem;
+  --r2xs: 0.25rem;
+  --rxs: 0.5rem;
+  --rs: 0.75rem;
+  --rm: 1rem;
+  --rh: 1.125rem;
+  --rl: 1.25rem;
+  --rxl: 1.5rem;
+  --r2xl: 1.75rem;
+  --r3xl: 2rem;
+  --r4xl: 2.5rem;
+  --r5xl: 3rem;
+}
