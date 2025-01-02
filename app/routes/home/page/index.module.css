@@ -39,7 +39,7 @@
            minmax(var(--padding-inline), 1fr)
         [full-width-end];
 
-        & input {
+        & input, & button {
             inline-size: 100%;
         }
 
