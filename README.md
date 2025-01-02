@@ -1,5 +1,6 @@
 ## Simple form
 We have simple form - one field, one submit button. And everything is in one component.
+[commit](https://github.com/PolyDevil/ed-forms/commit/45ee49e3009960122f173e741b562d38809b1dcf)
 
 ```tsx
 <form>
@@ -22,6 +23,8 @@ Visually it looks like this:
 ![img_1.png](img_1.png)
 
 Let's make sure that we can submit the form.
+[commit](https://github.com/PolyDevil/ed-forms/commit/6b4d963162ba85908b41ec326312acdf88eb11bf)
+
 ```tsx
 import type { FormEventHandler } from "react";
 
@@ -51,6 +54,8 @@ const formdata = Object.fromEntries(new FormData(document.querySelector('form'))
 ```
 
 So let's create a utility function
+[commit](https://github.com/PolyDevil/ed-forms/commit/2538014a3c8728d38776ece6c20a560a3ced88d1)
+
 ```ts
 // ./utils/form-data/index.ts
 export default class FormdataImpl {
@@ -70,6 +75,8 @@ And don't forget to make an alias in `tsconfig.json`:
 ```
 
 And we can show the result (also don't forget that `alert` takes a string, so we need to convert an object to a string):
+[commit](https://github.com/PolyDevil/ed-forms/commit/4edb340e7e9c4238518d35a1a124083834cefc3e)
+
 ```tsx
 // ...
 import Formdata from "Formdata";
@@ -97,6 +104,8 @@ It is easy, if we use html.
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#form
 
 So as long as form's `id` attribute (`<form id={FormID}`>) and button's `form` attribute (`<button form={FormID}>`) have the same value, button will work as it is in the form.
+[commit](https://github.com/PolyDevil/ed-forms/commit/ffbc576709f9b89233183cd008abde254d4d9ef8)
+
 ```tsx
 const FormID = "form";
 
@@ -117,6 +126,8 @@ And it works:
 ![img_4.png](img_4.png)
 
 So we can move the button and the form into separate components:
+[commit](https://github.com/PolyDevil/ed-forms/commit/501a8de676371bd9ee98c36687c74a382e9c78b8)
+
 ```tsx
 // page/index.tsx
 import c from "clsx";
@@ -229,6 +240,8 @@ function Component(props: props) {
 
 And since it is just a string, there is no guarantee that we will pass the correct string.
 We can use Branded types:
+[commit](https://github.com/PolyDevil/ed-forms/commit/8938b06ddd7cd91abc764125a19bb66f585395f5)
+
 ```ts
 // global.d.ts
 // By declaring a unique symbol, we create a distinct marker in TypeScript.
@@ -245,6 +258,8 @@ export {};
 ```
 
 And we need to create a class:
+[commit](https://github.com/PolyDevil/ed-forms/commit/231cd28e6d2b375c7fd65ed140429d18fac479f1)
+
 ```ts
 // utils/form-data/id.ts
 class FormIDImpl {
@@ -311,6 +326,8 @@ But there is still an error:
 ![img_7.png](img_7.png)
 
 We need to explicitly call `.toString` method:
+[commit](https://github.com/PolyDevil/ed-forms/commit/afc4256d1f8137a22a20d7447b1a35ce14043241)
+
 ```tsx
 form={props.formID.toString()}
 ```
@@ -322,3 +339,8 @@ But now we know how to:
  - convert form values into an object
  - move button out of the form
  - safely create branded data types that can safely consumed by agents we defined
+
+Props:
+ - framework-agnostic approach
+ - no dependencies
+ - better types
