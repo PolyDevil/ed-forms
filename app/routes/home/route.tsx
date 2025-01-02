@@ -1,5 +1,7 @@
 import type { Route } from "../../+types/root";
+
 import Page from "./page";
+import s from "./route.module.css";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +11,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Page />;
+  return <Page className={s.rootX} />;
 }
