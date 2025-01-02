@@ -1,3 +1,4 @@
+import type { FormEventHandler } from "react";
 import c from "clsx";
 
 import s from "./index.module.css";
@@ -7,8 +8,13 @@ interface props {
 }
 
 function Component(props: props) {
+  const onSubmit: FormEventHandler<HTMLFormElement> = (event) => {
+    event.preventDefault();
+    alert("submit");
+  };
+
   return (
-    <form className={c(s.rootX, props.className)}>
+    <form className={c(s.rootX, props.className)} onSubmit={onSubmit}>
       <input
         name="code"
         placeholder="123456 (code)"
