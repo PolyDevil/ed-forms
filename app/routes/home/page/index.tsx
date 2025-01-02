@@ -1,5 +1,6 @@
 import type { FormEventHandler } from "react";
 import c from "clsx";
+import Formdata from "Formdata";
 
 import s from "./index.module.css";
 
@@ -10,7 +11,14 @@ interface props {
 function Component(props: props) {
   const onSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
-    alert("submit");
+
+    if (!event.target) return;
+
+    const formdata = Formdata.toObject<{ code: string }>(
+      event.target as HTMLFormElement
+    );
+
+    alert(JSON.stringify(formdata));
   };
 
   return (
