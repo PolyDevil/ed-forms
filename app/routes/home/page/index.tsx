@@ -8,6 +8,8 @@ interface props {
   className?: string;
 }
 
+const FormID = "form";
+
 function Component(props: props) {
   const onSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
@@ -22,20 +24,22 @@ function Component(props: props) {
   };
 
   return (
-    <form className={c(s.rootX, props.className)} onSubmit={onSubmit}>
-      <input
-        name="code"
-        placeholder="123456 (code)"
-        autoComplete="one-time-code"
-        pattern="\d{6}"
-        inputMode="numeric"
-        minLength={6}
-        maxLength={6}
-        required
-      />
+    <div className={c(s.rootX, props.className)}>
+      <form id={FormID} onSubmit={onSubmit}>
+        <input
+          name="code"
+          placeholder="123456 (code)"
+          autoComplete="one-time-code"
+          pattern="\d{6}"
+          inputMode="numeric"
+          minLength={6}
+          maxLength={6}
+          required
+        />
+      </form>
 
-      <button>submit</button>
-    </form>
+      <button form={FormID}>submit</button>
+    </div>
   );
 }
 

@@ -40,11 +40,15 @@
         [full-width-end];
 
         & input {
+            inline-size: 100%;
+        }
+
+        & > *:first-child {
             grid-column: 2 / 3;
             grid-row: 1 / 2;
         }
 
-        & button {
+        & > *:last-child {
             grid-column: 4 / 5;
             grid-row: 1 / 2;
         }
