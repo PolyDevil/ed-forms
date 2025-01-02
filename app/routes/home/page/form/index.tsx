@@ -6,7 +6,7 @@ import s from "./index.module.css";
 
 interface props {
   className?: string;
-  formID: string;
+  formID: FormID;
 }
 
 function Component(props: props) {
@@ -24,7 +24,7 @@ function Component(props: props) {
 
   return (
     <form
-      id={props.formID}
+      id={props.formID.toString()}
       onSubmit={onSubmit}
       className={c(s.rootX, props.className)}
     >

@@ -1,4 +1,5 @@
 import c from "clsx";
+import { FormID } from "Formdata";
 
 import Header from "./header";
 import Form from "./form";
@@ -8,7 +9,7 @@ interface props {
   className?: string;
 }
 
-const formID = "form";
+const formID = new FormID("form");
 
 function Component(props: props) {
   return (
