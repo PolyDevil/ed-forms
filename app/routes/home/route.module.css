@@ -1,1 +1,3 @@
-:where(.rootX) {}
+:where(.rootX) {
+    padding-block: var(--s2xl);
+}

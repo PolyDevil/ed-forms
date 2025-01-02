@@ -1,1 +1,52 @@
-:where(.rootX) {}
+:where(.rootX) {
+    overflow: auto;
+    block-size: 100%;
+    grid-auto-rows: max-content;
+    background: var(--colorNeutralBackground3);
+    --_row-gap: var(--sm);
+    row-gap: var(--_row-gap);
+    padding-inline: var(--sm);
+    display: grid;
+    align-items: start;
+}
+
+@media screen and (24em <= width) {
+    .rootX {
+        --padding-inline: var(--sm);
+        --content-max-width: 36rem;
+        --content-gap: var(--sm);
+        --content-equal-half: min(
+                50% - var(--padding-inline) - calc(var(--content-gap) / 2),
+                calc(var(--content-max-width) / 2) - calc(var(--content-gap) / 2)
+        );
+
+        grid-template-columns:
+        [full-width-start]
+            minmax(var(--padding-inline), 1fr)
+
+            [row-start
+                left-start]
+                    var(--content-equal-half)
+               [left-end]
+
+                var(--content-gap)
+
+               [right-start]
+                    var(--content-equal-half)
+               [right-end
+            row-end]
+
+           minmax(var(--padding-inline), 1fr)
+        [full-width-end];
+
+        & input {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        & button {
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+        }
+    }
+}
