@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"],
-      "clsx": ["./utils/clsx"]
+      "clsx": ["./utils/clsx"],
+      "Formdata": ["./utils/form-data"]
     },
     "esModuleInterop": true,
     "verbatimModuleSyntax": true,
