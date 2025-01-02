@@ -1,3 +1,5 @@
+import type { FormID as FormIDImpl } from "Formdata";
+
 // By declaring a unique symbol, we create a distinct marker in TypeScript.
 declare const __brand: unique symbol;
 
@@ -6,6 +8,8 @@ declare global {
   type Branded<Type, Brand> = Type & {
     readonly [__brand]: Brand;
   };
+
+  type FormID = FormIDImpl;
 }
 
 export {};

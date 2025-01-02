@@ -3,3 +3,5 @@ export default class FormdataImpl {
     return Object.fromEntries(new FormData(node)) as T;
   }
 }
+
+export { default as FormID } from "./id";
